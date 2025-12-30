@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="TOMORO – Empowering Movement with Motion Capture & Assistive Robotics. AI Smart Coach + Motion Lab + Manga-Style Growth System.">
+    <title>TOMORO | Motion Intelligence Ecosystem</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Outfit:wght@300;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">TOMORO<span class="tech-suffix">.TECH</span></div>
+        <ul class="nav-links">
+            <li><a href="#hero">Mission</a></li>
+            <li><a href="#dashboard">Bio-Hub</a></li>
+            <li><a href="#gamification">Gamification</a></li>
+            <li><a href="#tech">Technology</a></li>
+            <li><a href="#future">Future</a></li>
+        </ul>
+        <button class="cta-btn sm">Get Started</button>
+        <button id="theme-toggle" class="cta-btn sm secondary theme-btn" aria-label="Toggle Theme">
+            <i class="fas fa-sun"></i>
+        </button>
+    </nav>
+
+    <!-- Block 1: Hero/Main Section -->
+    <section id="hero" class="hero-section">
+        <div class="video-bg-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-text-container animate-fade-in-left">
+                <span class="tagline">AI-Powered Performance Suite</span>
+                <h1 class="glitch-text" data-text="Empowering Movement">Empowering Movement</h1>
+                <h2>With Motion Capture & Assistive Robotics</h2>
+                <p>Experience the future where high-precision markerless motion capture meets AI smart training.
+                    Validated accuracy, real-time biomechanics, and zero wearables required.</p>
+                <div class="cta-group">
+                    <button class="cta-btn primary">Unlock Your Ultimate Potential</button>
+                    <button class="cta-btn secondary"><i class="fas fa-play"></i> Watch Mission</button>
+                </div>
+            </div>
+            <div class="hero-visual animate-fade-in-right">
+                <!-- Simulation of split screen video -->
+                <div class="split-screen-container">
+                    <div class="split-side real">
+                        <div class="video-container">
+                            <div class="label">Motion Captured</div>
+                            <video id="hero-video" class="styled-video" poster="video_poster_hero.png" autoplay muted
+                                loop playsinline>
+                                <!-- Placeholder for user to drop their Veo video -->
+                                <source src="assets/hero_motion.mp4" type="video/mp4">
+                            </video>
+                            <button class="sound-toggle" data-target="hero-video" aria-label="Toggle Sound">
+                                <i class="fas fa-volume-mute"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="split-side digital">
+                        <div class="label">Motion Intelligence</div>
+                        <img src="motion_intelligence.png" alt="Motion Analysis Data" class="motion-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Block 2: All in one Dashboard -->
+    <section id="dashboard" class="dashboard-section">
+        <div class="section-header">
+            <h2>Bio-Data Hub</h2>
+            <p>Your body, quantified. Real-time metrics and historical evolution.</p>
+        </div>
+        <div class="dashboard-grid">
+            <div class="dash-card profile-card">
+                <div class="avatar-container">
+                    <div class="avatar-aura"></div>
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Tomoro" alt="User Avatar"
+                        class="user-avatar">
+                </div>
+                <h3>Jin Woo</h3>
+                <p class="user-level">Level 12 Shadow Runner</p>
+                <div class="vitals">
+                    <div class="vital-item">
+                        <span class="label">HR</span>
+                        <span class="value">120 <span class="unit">bpm</span></span>
+                    </div>
+                    <div class="vital-item">
+                        <span class="label">Cal</span>
+                        <span class="value">450 <span class="unit">kcal</span></span>
+                    </div>
+                    <div class="vital-item">
+                        <span class="label">Recovery</span>
+                        <span class="value">92%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dash-card motion-metrics">
+                <h3>Live Motion Metrics</h3>
+                <div class="metric-row">
+                    <span>Knee Flexion</span>
+                    <div class="progress-bar">
+                        <div class="fill" style="width: 85%"></div>
+                    </div>
+                    <span>112°</span>
+                </div>
+                <div class="metric-row">
+                    <span>Hip Rotation</span>
+                    <div class="progress-bar">
+                        <div class="fill" style="width: 45%"></div>
+                    </div>
+                    <span>12°</span>
+                </div>
+                <div class="metric-row">
+                    <span>Quadriceps Stress</span>
+                    <div class="progress-bar warning">
+                        <div class="fill" style="width: 70%"></div>
+                    </div>
+                    <span>High</span>
+                </div>
+            </div>
+
+            <div class="dash-card progress-chart">
+                <h3>Evolution Radar</h3>
+                <!-- Simple CSS implementation of a radar chart visual -->
+                <div class="radar-chart-visual">
+                    <div class="polygon"></div>
+                    <div class="stat-point p1" data-label="Strength"></div>
+                    <div class="stat-point p2" data-label="Flexibility"></div>
+                    <div class="stat-point p3" data-label="Endurance"></div>
+                    <div class="stat-point p4" data-label="Balance"></div>
+                    <div class="stat-point p5" data-label="Speed"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Block 3: The Gamification Engine -->
+    <section id="gamification" class="gamification-section">
+        <div class="container">
+            <div class="section-header centered">
+                <h2 class="manga-title">Level Up In Real Life</h2>
+                <p>Turn sweat into XP. Complete quests, unlock arcs, and evolve.</p>
+            </div>
+
+            <div class="arcs-container">
+                <div class="arc-card beginner">
+                    <div class="arc-level">Lvl 1-5</div>
+                    <h3>Beginner Arc</h3>
+                    <ul class="quest-list">
+                        <li><i class="fas fa-check-circle"></i> Posture Quests</li>
+                        <li><i class="fas fa-circle-notch"></i> Breathing Drills</li>
+                        <li><i class="fas fa-lock"></i> Seed of Strength Badge</li>
+                    </ul>
+                </div>
+
+                <div class="arc-card intermediate active">
+                    <div class="arc-level">Lvl 6-15</div>
+                    <h3>Intermediate Arc</h3>
+                    <div class="current-quest">
+                        <span class="quest-tag">Active Quest</span>
+                        <h4>Knee Strength: +4%</h4>
+                        <div class="xp-bar">
+                            <div class="fill" style="width: 60%"></div>
+                        </div>
+                    </div>
+                    <ul class="quest-list">
+                        <li><i class="fas fa-play-circle"></i> Adaptive AI Missions</li>
+                        <li><i class="fas fa-users"></i> Community Challenges</li>
+                    </ul>
+                </div>
+
+                <div class="arc-card legend">
+                    <div class="arc-level">Lvl 31+</div>
+                    <h3>Legend Arc</h3>
+                    <ul class="quest-list">
+                        <li><i class="fas fa-lock"></i> AR Arena Battles</li>
+                        <li><i class="fas fa-crown"></i> Become a Mentor</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Block 4: Technology Deep Dive -->
+    <section id="tech" class="tech-section">
+        <div class="tech-content">
+            <div class="tech-text">
+                <h2>High-Precision Markerless Motion Capture</h2>
+                <p>Built on advanced optical camera systems (Qualisys-grade) fused with depth-based skeletal modeling.
+                    No suits, no sensors, just pure vision-based intelligence.</p>
+                <div class="tech-specs">
+                    <div class="spec-item">
+                        <span class="spec-val">&lt; 1.21°</span>
+                        <span class="spec-label">RMSE Accuracy</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-val">60fps</span>
+                        <span class="spec-label">Real-time Sensing</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-val">0</span>
+                        <span class="spec-label">Wearables Needed</span>
+                    </div>
+                </div>
+            </div>
+            <div class="tech-visual">
+                <div class="scanner-ui">
+                    <div class="scan-line"></div>
+                    <div class="data-points">
+                        <span class="dp dp1"></span>
+                        <span class="dp dp2"></span>
+                        <span class="dp dp3"></span>
+                    </div>
+                    <img src="tech_scanner.png" alt="Motion Tech" class="tech-img-filter">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Block 5: AI Personalization -->
+    <section id="ai-context" class="ai-context-section">
+        <div class="container">
+            <h2>An AI Coach That Knows Your Context</h2>
+            <div class="context-grid">
+                <div class="context-card">
+                    <i class="fas fa-comment-medical icon"></i>
+                    <h3>Form Correction</h3>
+                    <p>"Rotate shoulder 3° more." Live actionable audio cues preventing injury.</p>
+                </div>
+                <div class="context-card">
+                    <i class="fas fa-shield-virus icon"></i>
+                    <h3>Injury Risk AI</h3>
+                    <p>Detects knee valgus & hip tilt deviations before pain starts.</p>
+                </div>
+                <div class="context-card">
+                    <i class="fas fa-cloud-sun-rain icon"></i>
+                    <h3>Smart Tasks</h3>
+                    <p>Adapts to weather, time of day & recovery load. Morning mobility? Evening cooldown?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Block 6: Rehab -->
+    <section id="rehab" class="rehab-section">
+        <div class="container">
+            <div class="section-header centered">
+                <span class="subtitle">Healthcare</span>
+                <h2>Accelerating Recovery</h2>
+                <p>Data-driven home physiotherapy. Objective metrics replace guesswork.</p>
+            </div>
+            <div class="rehab-grid">
+                <div class="rehab-card">
+                    <div class="icon-box"><i class="fas fa-chart-line"></i></div>
+                    <h3>Remote Monitoring</h3>
+                    <p>Therapists track your progress in real-time.</p>
+                </div>
+                <div class="rehab-card">
+                    <div class="icon-box"><i class="fas fa-bone"></i></div>
+                    <h3>Gait Analysis</h3>
+                    <p>Detect micro-deviations in walking patterns.</p>
+                </div>
+                <div class="rehab-card">
+                    <div class="icon-box"><i class="fas fa-heartbeat"></i></div>
+                    <h3>Pain Tracking</h3>
+                    <p>Correlate movement quality with pain levels.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Block 7: Yoga -->
+    <section id="yoga" class="yoga-section">
+        <div class="overlay"></div>
+        <div class="container relative centered">
+            <h2>Perfect Your Form</h2>
+            <p>From asanas to sprints, get studio-grade feedback. Balance strength, flexibility, and mindfulness with
+                scientific precision.</p>
+            <div class="yoga-grid">
+                <div class="yoga-card">
+                    <i class="fas fa-microscope"></i>
+                    <span>Micro-Deviation Detection</span>
+                </div>
+                <div class="yoga-card">
+                    <i class="fas fa-wind"></i>
+                    <span>Breath Syncing</span>
+                </div>
+                <div class="yoga-card">
+                    <i class="fas fa-balance-scale"></i>
+                    <span>Sway Analysis</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Block 8: Accessibility -->
+    <section id="access" class="access-section">
+        <div class="container centered">
+            <h2>No Wearables. No Barriers.</h2>
+            <p class="section-desc">Simply stand in front of your camera. That's it.</p>
+            <div class="device-grid">
+                <div class="device-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Mobile</h3>
+                </div>
+                <div class="device-card">
+                    <i class="fas fa-tv"></i>
+                    <h3>Smart TV</h3>
+                </div>
+                <div class="device-card">
+                    <i class="fas fa-laptop"></i>
+                    <h3>Laptop/PC</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Block 9: AR Social Game -->
+    <section id="ar-game" class="ar-section">
+        <div class="container centered">
+            <h2>Train in Reality. Play in AR.</h2>
+            <p class="section-desc">Turn your living room into a fitness battleground.</p>
+            <div class="ar-grid">
+                <div class="ar-card">
+                    <div class="ar-icon"><i class="fas fa-fist-raised"></i></div>
+                    <h3>PvP Battles</h3>
+                    <p>Rep duels & stability challenges.</p>
+                </div>
+                <div class="ar-card">
+                    <div class="ar-icon"><i class="fas fa-dragon"></i></div>
+                    <h3>Raid Bosses</h3>
+                    <p>Group fitness missions.</p>
+                </div>
+                <div class="ar-card">
+                    <div class="ar-icon"><i class="fas fa-map-marked-alt"></i></div>
+                    <h3>World Map</h3>
+                    <p>Explore zones via movement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Block 10: Social Economy -->
+    <section id="social" class="social-section">
+        <div class="container social-layout">
+            <div class="social-text">
+                <h2>Share Your Evolution</h2>
+                <p>AI automatically generates highlight reels of your best moves. Overlays stats, music, and effects
+                    instantly.</p>
+                <div class="social-features">
+                    <div class="s-feature"><i class="fas fa-magic"></i> Auto-Edit</div>
+                    <div class="s-feature"><i class="fas fa-music"></i> Beat Sync</div>
+                    <div class="s-feature"><i class="fas fa-share-alt"></i> Instant Share</div>
+                </div>
+            </div>
+            <div class="social-visual">
+                <!-- Abstract Representation of AI Editing -->
+                <div class="editor-ui">
+                    <div class="timeline-track">
+                        <div class="clip c1"></div>
+                        <div class="clip c2"></div>
+                        <div class="clip c3"></div>
+                        <div class="playhead"></div>
+                    </div>
+                    <div class="preview-window">
+                        <div class="tech-overlay-icon"><i class="fas fa-film"></i></div>
+                        <span>Generating Highlight...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Block 11: Mission Video & Future Vision -->
+    <section id="mission-video" class="mission-section">
+        <div class="container centered">
+            <h2>Our Mission</h2>
+            <div class="mission-video-wrapper">
+                <video id="mission-video-player" class="styled-video big-video" poster="video_poster_mission.png" muted
+                    loop playsinline>
+                    <source src="assets/mission_vision.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay-controls">
+                    <button class="play-btn-large" id="mission-play-btn"><i class="fas fa-play"></i></button>
+                    <div class="sound-control">
+                        <button class="sound-toggle" data-target="mission-video-player"><i
+                                class="fas fa-volume-mute"></i></button>
+                    </div>
+                </div>
+            </div>
+            <p class="mission-text">"Future isn't just simulated. It's lived."</p>
+        </div>
+    </section>
+
+    <!-- Block 12: Future Text (Simplified) -->
+    <section id="future" class="future-section">
+        <div class="future-bg"></div>
+        <div class="container centered">
+            <h2>Educate. Innovate. Impact.</h2>
+            <p class="future-text">We envision a world of Exoskeleton Robotics, Haptic Feedback Suits, and fully
+                immersive AI Therapy. This is just the beginning.</p>
+            <div class="vision-tags">
+                <span>Human Movement Reimagined</span>
+                <span>Motion Intelligence</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Block 12: Footer -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="brand-col">
+                <h3>TOMORO.TECH</h3>
+                <p>Creating a future where motion tracking empowers healthcare and fosters human potential.</p>
+            </div>
+            <div class="links-col">
+                <h4>Platform</h4>
+                <a href="#">Technology</a>
+                <a href="#">For Clinics</a>
+                <a href="#">Creators</a>
+            </div>
+            <div class="contact-col">
+                <h4>Contact</h4>
+                <p>+91-8903772381</p>
+                <p>info@tomoro.tech</p>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 TOMORO.TECH. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
